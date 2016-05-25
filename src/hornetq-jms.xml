@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration xsi:schemaLocation="urn:hornetq /schema/hornetq-jms.xsd"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:hornetq">
+	<!--the connection factory used by the example -->
+	<connection-factory name="ConnectionFactory">
+		<connectors>
+			<connector-ref connector-name="netty-connector" />
+		</connectors>
+		<entries>
+			<entry name="ConnectionFactory" />
+		</entries>
+	</connection-factory>
+	<queue name="sgi-data">
+		<entry name="sgi-data" />
+	</queue>
+	<queue name="cq1">
+		<entry name="cq1" />
+	</queue>
+	<queue name="cq2">
+		<entry name="cq2" />
+	</queue>
+	<queue name="cq3">
+		<entry name="cq3" />
+	</queue>
+</configuration>

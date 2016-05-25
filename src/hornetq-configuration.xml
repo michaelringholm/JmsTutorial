@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration xsi:schemaLocation="urn:hornetq /schema/hornetq-configuration.xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:hornetq">
+    <connectors>
+        <connector name="netty-connector">
+            <factory-class>org.hornetq.integration.transports.netty.NettyConnectorFactory</factory-class>            
+            <param key="host" value="jnp://nb-chzu-0265.int.audatex.com"/>    
+         	<param key="port" value="5445"/>
+        </connector>
+    </connectors>
+    <acceptors>
+        <acceptor name="netty-acceptor">
+            <factory-class>org.hornetq.integration.transports.netty.NettyAcceptorFactory
+            </factory-class>
+            <param key="port" value="5445"/>
+            <param key="host" value="0.0.0.0"/>
+        </acceptor>
+    </acceptors>
+    <security-enabled>false</security-enabled>
+</configuration>
